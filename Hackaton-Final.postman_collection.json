@@ -1,0 +1,432 @@
+{
+	"info": {
+		"_postman_id": "5dd9ccf7-fc2f-4fa4-825e-b8da12192a8d",
+		"name": "Hackaton-Final",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30544915"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"ramg23\",\r\n    \"email\":\"ramendizabalg23@hotmail.com\",\r\n    \"password\":\"admin23\",\r\n    \"roles\":[\"user\",\"admin\",\"moderator\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hackaton-final-lhrx.onrender.com/api/auth/signup",
+							"protocol": "https",
+							"host": [
+								"hackaton-final-lhrx",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"ramg23\",\r\n    \r\n    \"password\":\"admin23\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hackaton-final-lhrx.onrender.com/api/auth/signin",
+							"protocol": "https",
+							"host": [
+								"hackaton-final-lhrx",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://hackaton-final-lhrx.onrender.com/api/auth/signout",
+							"protocol": "https",
+							"host": [
+								"hackaton-final-lhrx",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"auth",
+								"signout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "Home",
+					"item": [
+						{
+							"name": "BuscarPornombreProducto",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"r\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://hackaton-final-lhrx.onrender.com/api/home/searchByName",
+									"protocol": "https",
+									"host": [
+										"hackaton-final-lhrx",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"home",
+										"searchByName"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "buscarporcategoria",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"category\":\"Laptops\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://hackaton-final-lhrx.onrender.com/api/home/searchByCategory",
+									"protocol": "https",
+									"host": [
+										"hackaton-final-lhrx",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"home",
+										"searchByCategory"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "crearproducto",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\r\n    \"name\": \"Monitor Samsung Odyssey G7\",\r\n    \"description\": \"Monitor gaming de 32 pulgadas, curvo 1000R, resolución QHD, frecuencia de actualización de 240Hz, NVIDIA G-Sync, HDR 600.\",\r\n    \"category\": \"Monitores\",\r\n    \"price\": 999.99,\r\n    \"stock\": 7\r\n  }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://hackaton-final-lhrx.onrender.com/api/products/addproduct",
+									"protocol": "https",
+									"host": [
+										"hackaton-final-lhrx",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"products",
+										"addproduct"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "allproductos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://hackaton-final-lhrx.onrender.com/api/products",
+									"protocol": "https",
+									"host": [
+										"hackaton-final-lhrx",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "actualizarProducto",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"price\":200.9,\r\n    \"stock\":40\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://hackaton-final-lhrx.onrender.com/api/products/0000001",
+									"protocol": "https",
+									"host": [
+										"hackaton-final-lhrx",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"products",
+										"0000001"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "EliminarProducto",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://hackaton-final-lhrx.onrender.com/api/products/delete/0000021",
+									"protocol": "https",
+									"host": [
+										"hackaton-final-lhrx",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"products",
+										"delete",
+										"0000021"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Checkout",
+			"item": [
+				{
+					"name": "AgregarProductosalcarrito",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"codproducto\": \"0000007\",\r\n    \"quantity\": 3,\r\n    \"price\": 129.99\r\n  }\r\n  \r\n]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hackaton-final-lhrx.onrender.com/api/checkout/add",
+							"protocol": "https",
+							"host": [
+								"hackaton-final-lhrx",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"checkout",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarProductosdelCarrito",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://hackaton-final-lhrx.onrender.com/api/checkout",
+							"protocol": "https",
+							"host": [
+								"hackaton-final-lhrx",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"checkout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminarProductodelCarrito",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hackaton-final-lhrx.onrender.com/api/checkout/66514a28a209c02703df4a0a/remove/0000001",
+							"protocol": "https",
+							"host": [
+								"hackaton-final-lhrx",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"checkout",
+								"66514a28a209c02703df4a0a",
+								"remove",
+								"0000001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ConfirmarOrdendeCarrito",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://hackaton-final-lhrx.onrender.com/api/checkout/confirm-purchase/66514a28a209c02703df4a0a",
+							"protocol": "https",
+							"host": [
+								"hackaton-final-lhrx",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"checkout",
+								"confirm-purchase",
+								"66514a28a209c02703df4a0a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payment-strapi",
+			"item": [
+				{
+					"name": "strapi",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://hackaton-final-lhrx.onrender.com/api/payment/process/ORD-sqy21yj7g",
+							"protocol": "https",
+							"host": [
+								"hackaton-final-lhrx",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"payment",
+								"process",
+								"ORD-sqy21yj7g"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
