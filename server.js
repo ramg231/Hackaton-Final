@@ -44,6 +44,8 @@ mongoose.connect(dbConfig.URI, {
  
   require("./app/routes/homeproduct.routes.js")(app);
   require("./app/routes/product.routes.js")(app);
+  require("./app/routes/checkout.routes.js")(app);
+  require("./app/routes/order.routes.js")(app);
 
 const PORT = process.env.PORT || 8080;
 
