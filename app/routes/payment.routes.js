@@ -1,5 +1,5 @@
- const { authJwt } = require("../middlewares");
-const orderController = require('../controllers/order.controller');
+const { authJwt } = require("../middlewares");
+const paymentController = require('../controllers/payment.controller');
  module.exports = function(app) {
   app.use(function(req, res, next) {
     res.header(
@@ -10,5 +10,5 @@ const orderController = require('../controllers/order.controller');
   });
 
   // Ruta en Express
-app.post('/api/checkout/confirm-purchase/:cartId', [authJwt.verifyToken, authJwt.isUser], orderController.confirmPurchase);
+app.post('/api/payment/process/:orderNumber', [authJwt.verifyToken, authJwt.isUser], paymentController.processPayment);
 };
